@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Futuristic Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .login-container {
+      width: 350px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 40px;
+      background: transparent;
+      border: 1px solid #00ffff;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .input-group i {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      color: #00ffff;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00ffff, #0077ff);
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      box-shadow: 0 0 10px #00ffff, 0 0 40px #00ffff;
+    }
+
+    .links {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .links a {
+      color: #00ffff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+  <!-- Icons CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <div class="input-group">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="Username" />
+    </div>
+    <div class="input-group">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Password" />
+    </div>
+    <button class="login-btn">Login</button>
+    <div class="links">
+      <a href="#">Forgot?</a> | <a href="#">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+</html>

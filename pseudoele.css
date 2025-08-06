@@ -1,0 +1,85 @@
+body{
+  background-image:linear-gradient(to left , rgb(166, 23, 205),rgb(209, 144, 31));
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+.click{
+  position:relative;
+  font-size: 30px;
+  border: 10px solid yellowgreen;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width:300px;
+  height: 100px; 
+  color: azure;
+  overflow: hidden;
+}
+.click::before{
+  position:absolute;
+  z-index: -1;
+  content:"";
+  width:100%;
+  height: 100%; 
+  background-color:rgb(4, 111, 111) ;
+  transform: translateX(-300px);
+  transition: transform .8s ease-in-out;
+}
+
+.click:hover::before{
+  transform: translateX(150px);
+}
+.click::after{
+  position:absolute;
+  z-index: -2;
+  content:"";
+  width:100%;
+  height: 100%; 
+  background-color:rgb(13, 149, 88) ;
+  transform: translateX(300px);
+  transition: transform .8s ease-in-out;
+}
+.click:hover::after{
+  transform: translateX(-150px);
+}
+.click2{
+  border: 10px solid yellowgreen;
+  width: 300px;
+  height: 100px;
+  position: relative;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 30px;
+  border-radius: 60px;
+  color: azure;
+ 
+  z-index: 1;
+}
+.click2::before{
+  content:"";
+  z-index: -1;
+  position:absolute;
+  background-color: rgb(104, 107, 107);
+  width:80px;
+  height: 80px;
+  opacity: .8;
+  border-radius: 150px;
+  transform: translateY(50px) translateX(110px);
+  transition: transform .8s linear;
+}
+.click2:hover::before{
+  width: 300px;
+  height: 100px;
+  border-radius:60px ;
+  transform: translateY(0px) translateX(0px);
+  background-color: aqua;
+  opacity: .4;
+}

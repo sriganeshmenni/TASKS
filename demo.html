@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>promises</title>
+</head>
+<body>
+  <script>
+    function fun1(){
+     return new promise(function(resolved){
+      setTimeout(function(){
+        resolved();
+      },1000)
+     })
+    }
+     function fun2(value){
+     return new promise(function(resolved){
+      setTimeout(function p2(){
+        resolved();
+      },1000)
+     })
+    }
+     function fun3(value){
+     return new promise(function(resolved){
+      setTimeout(function p3(){
+        resolved();
+      },1000)
+     })
+    }
+    fun1().then(function p1(){
+      console.log("completed");
+    })
+  </script>
+</body>
+</html>

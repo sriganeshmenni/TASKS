@@ -1,0 +1,115 @@
+
+<html>
+<head>
+  
+  <title>Sri Ganesh Visiting Card</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <script src="./particle.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+  <style>
+    body {
+      background: #0f0f0f;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      display: flex;
+      width: 600px;
+      height: 300px;
+      border-radius: 20px;
+      background: linear-gradient(to right, #ffffff 50%, #121212 50%);
+      box-shadow: 0 0 25px rgba(0, 255, 234, 0.6);
+      overflow: hidden;
+    }
+
+    .left {
+      width: 50%;
+      background-color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+    #particles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      filter: brightness(1) contrast(1.7) blur(0.1px);
+    }
+
+    .left img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #00c9a7;
+      margin-bottom: 15px;
+    }
+
+    .left .name {
+      font-family: 'Pacifico', cursive;
+      font-size: 20px;
+      color: #222;
+    }
+
+    .left .role {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 14px;
+      color: #333;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    .right {
+      width: 50%;
+      color: #f5f5f5;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    .info-item {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .info-item i {
+      margin-right: 10px;
+      color: #00c9a7;
+      width: 20px;
+      text-align: center;
+    }
+
+  
+  </style>
+</head>
+<body>
+ <canvas id="particles"></canvas>
+  <div class="card">
+    <div class="left">
+      <img src="sriganesh.jpg" alt="Sri Ganesh">
+      <div class="name">Sriganesh Menni</div>
+      <div class="role">Full Stack Developer</div>
+    </div>
+    <div class="right">
+      <div class="info-item"><i class="fas fa-envelope"></i> mennisriganesh@gmail.com</div>
+      <div class="info-item"><i class="fas fa-phone"></i> +91 93471 29335</div>
+      <div class="info-item"><i class="fab fa-instagram"></i> @sriganesh_menni</div>
+      <div class="info-item"><i class="fas fa-map-marker-alt"></i> Rajahmundry, Andhra Pradesh - 533101</div>
+      <div class="info-item"><i class="fas fa-code"></i> Passionate Developer | UI/UX Enthusiast</div>
+    </div>
+  </div>
+
+</body>
+</html>

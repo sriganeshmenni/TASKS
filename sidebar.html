@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-image:linear-gradient(to right,rgba(13, 170, 136, 0.548),rgb(7, 110, 114),rgb(138, 38, 124));
+    }
+    #cp {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border-radius: 60px;
+      pointer-events: none;
+      background-color: rgba(224, 224, 230, 0.356);
+    }
+    .sidebar{
+      width:200px;
+      height:100svh;
+      position:absolute;
+      transition: 0.4s ease-out;
+      left:-200px;
+      align-items: end;
+      background-color: rgb(161, 55, 153);
+      
+      display: flex;
+      cursor:pointer;
+      flex-direction: column;
+      color: rgb(0, 0, 0);
+      font-size: 26px;
+    
+    }
+    .sidebar div{
+      width:100%;
+      padding:8px 0px;
+      border-radius: 10%;
+      color:aquamarine;
+      border-bottom: 1px solid black;
+    }
+    .sidebar div:hover{
+      background-color: rgba(255, 255, 255, 0.349);
+      text-align: center;
+    }
+    .sidebar span{
+      position:relative;
+       width:fit-content;
+       font-size: 35px;
+       
+    }
+    button{
+      border-radius: 10px;;
+      color:blueviolet;
+      background-color: yellowgreen;
+      font-size:15px;
+    }
+  </style>
+  
+</head>
+<body>
+  <div id="cp"></div>
+  <button onclick="ope()">open menu</button>
+  <div class="sidebar" >
+    <span onclick="clos()" >&times;</span>
+    <div>home</div>
+    <div>contact</div>
+    <div>About</div>
+    <div>services</div>
+
+  </div>
+  <script>
+    function ope(){
+      document.getElementsByClassName('sidebar')[0].style="left:0px;top:0px;"
+    }
+      function clos(){
+      document.getElementsByClassName('sidebar')[0].style="left:-200px;top:0px;"
+    }
+     const cp = document.getElementById('cp');
+    document.addEventListener('mousemove', (e) => {
+      cp.style.transform=`translate(${e.clientX-18}px,${e.clientY-18}px)`
+    });
+  </script>
+</body>
+</html>

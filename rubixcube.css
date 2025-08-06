@@ -1,0 +1,144 @@
+body{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.rubixrubixcube{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotaterubixcube 10s infinite linear;
+}
+@keyframes rotaterubixcube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.rubixrubixcube div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1px;
+    padding: 1px;
+}
+
+.face .box {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+    background-color: red;
+}
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+    background-color: blue;
+}
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+    background-color: green;
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-color: yellow;
+}
+.back {
+    transform: rotateY(180deg) translateZ(100px);
+    background-color: orange;
+}
+
+.front {
+    transform: translateZ(-100px);
+    background-color: purple;
+}
+.rubixcube .face {
+    position: absolute;
+}
+.rubixcube .left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.rubixcube .right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.rubixcube .top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+.rubixcube .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.rubixcube .back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+.rubixcube .front {
+    transform: translateZ(-100px);
+}
+.rubixcube .left, .rubixcube .right, .rubixcube .top, .rubixcube .bottom, .rubixcube .back, .rubixcube .front {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1px;
+    padding: 1px;
+}
+.rubixcube .left .box, .rubixcube .right .box, .rubixcube .top .box, .rubixcube .bottom .box, .rubixcube .back .box, .rubixcube .front .box {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+.rubixcube .left .box:nth-child(1) { background-color: red; }
+.rubixcube .left .box:nth-child(2) { background-color: darkred; }
+.rubixcube .left .box:nth-child(3) { background-color: lightcoral; }
+.rubixcube .right .box:nth-child(1) { background-color: blue; }
+.rubixcube .right .box:nth-child(2) { background-color: darkblue; }    
+.rubixcube .right .box:nth-child(3) { background-color: lightblue; }
+.rubixcube .top .box:nth-child(1) { background-color: green; }
+.rubixcube .top .box:nth-child(2) { background-color: darkgreen; }
+.rubixcube .top .box:nth-child(3) { background-color: lightgreen; }
+.rubixcube .bottom .box:nth-child(1) { background-color: yellow; }
+.rubixcube .bottom .box:nth-child(2) { background-color: gold; }
+.rubixcube .bottom .box:nth-child(3) { background-color: lightyellow; }
+.rubixcube .back .box:nth-child(1) { background-color: orange; }
+.rubixcube .back .box:nth-child(2) { background-color: darkorange; }
+.rubixcube .back .box:nth-child(3) { background-color: lightorange; }
+.rubixcube .front .box:nth-child(1) { background-color: purple; }
+.rubixcube .front .box:nth-child(2) { background-color: darkviolet; }
+.rubixcube .front .box:nth-child(3) { background-color: plum; }
+.rubixcube .left .box:nth-child(4) { background-color: red; }
+.rubixcube .left .box:nth-child(5) { background-color: darkred; }
+.rubixcube .left .box:nth-child(6) { background-color: lightcoral; }
+.rubixcube .right .box:nth-child(4) { background-color: blue; }
+.rubixcube .right .box:nth-child(5) { background-color: darkblue; }
+.rubixcube .right .box:nth-child(6) { background-color: lightblue; }
+.rubixcube .top .box:nth-child(4) { background-color: green; }
+.rubixcube .top .box:nth-child(5) { background-color: darkgreen; }
+.rubixcube .top .box:nth-child(6) { background-color: lightgreen; }
+.rubixcube .bottom .box:nth-child(4) { background-color: yellow; }
+.rubixcube .bottom .box:nth-child(5) { background-color: gold; }
+.rubixcube .bottom .box:nth-child(6) { background-color: lightyellow; }
+.rubixcube .back .box:nth-child(4) { background-color: orange; }
+.rubixcube .back .box:nth-child(5) { background-color: darkorange; }
+.rubixcube .back .box:nth-child(6) { background-color: lightorange; }
+.rubixcube .front .box:nth-child(4) { background-color: purple; }
+.rubixcube .front .box:nth-child(5) { background-color: darkviolet; }
+.rubixcube .front .box:nth-child(6) { background-color: plum; }
+.rubixcube .left .box:nth-child(7) { background-color: red; }
+.rubixcube .left .box:nth-child(8) { background-color: darkred; }
+.rubixcube .left .box:nth-child(9) { background-color: lightcoral; }
+.rubixcube .right .box:nth-child(7) { background-color: blue; }
+.rubixcube .right .box:nth-child(8) { background-color: darkblue; }
+.rubixcube .right .box:nth-child(9) { background-color: lightblue; }

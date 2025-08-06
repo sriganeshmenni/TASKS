@@ -1,0 +1,47 @@
+body{
+  background-image:linear-gradient(to top, rgb(16, 15, 16),rgb(88, 88, 168));
+  color:rgb(255, 255, 255);
+}
+.me{
+  width: 300px;
+  height: 300px;
+  position:relative;
+  background-color: rgb(0, 255, 191);
+  border-radius: 40%;
+  opacity: 0.3;
+  animation: myan 10s infinite ease-in-out;
+}
+
+@keyframes myan {
+  0% {
+  background-color: rgb(22, 185, 144);
+  left: 0px;
+  opacity: 0.6;
+  }
+  100% {
+    background-color: rgb(0, 255, 191);
+  left:1500px;
+  opacity: 0.9;
+  }
+}
+.me1{
+  width: 300px;
+  height: 300px;
+  position:relative;
+  background-color: rgb(17, 219, 222);
+  border-radius: 40%;
+  opacity: 0.3;
+  animation: myan2 10s infinite ease-in-out;
+}
+@keyframes myan2 {
+  0% {
+  background-color: rgb(15, 220, 235);
+  left: 1500px;
+  opacity: 0.6;
+  }
+  100% {
+    background-color: rgb(5, 217, 236);
+  left:0px;
+  opacity: 0.9;
+  }
+}

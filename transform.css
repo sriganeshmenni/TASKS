@@ -1,0 +1,88 @@
+body{
+  background-image:linear-gradient(to left , rgb(166, 23, 205),rgb(209, 144, 31));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+.box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 5px solid yellowgreen;
+  border-radius: 60px;
+  perspective: 1000px;
+  animation: myan2 4s infinite linear;
+}
+@keyframes myan2 {
+  0% {
+     width: 300px;
+  height: 300px;
+  border: 5px solid yellowgreen;
+  }
+  100% {
+     width: 600px;
+  height: 600px;
+  border: 5px solid rgb(24, 196, 170);
+}
+}
+.c{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(4, 111, 111);
+  transform: rotateX(180deg) rotate3d(1, 0, 0, 180deg);
+  border-radius: 60px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style:preserve-3d;
+  transition: transform 2s ease-in-out;
+  animation: myan 2s infinite linear;
+}
+.c:hover{
+  transform: rotateX(0deg);
+}
+.d
+{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: rgb(13, 149, 88);
+  transform: skew(-20deg);
+  transform-style:preserve-3d;
+}
+
+.d::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(13, 149, 88);
+  transform: translateZ(-150px);
+}
+.d::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(13, 149, 88);
+  transform: translateZ(150px);
+}
+@keyframes myan {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-360deg);
+  }
+}
+#particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  filter: brightness(1) contrast(1.7) blur(0.1px);
+}

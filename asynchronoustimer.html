@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous</title>
+  <link href="https://db.onlinewebfonts.com/c/58045dabdc3a361cb9bb9faf2f1dd1f3?family=Digital-7+V7" rel="stylesheet">
+  <style>
+    
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Digital-7 V7', sans-serif;      
+      position: relative;
+     background-color: black;
+     
+    }
+    .watch{
+      width: 400px;
+      height:400px;
+      background-image: linear-gradient(to right,rgb(69, 80, 77),rgb(204, 214, 214));
+      background-image: linear-gradient(to bottom,rgb(70, 168, 142),rgb(110, 58, 108));
+       display: flex;
+       position: absolute;
+         top:270px;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      flex-direction: row;
+      border-radius: 100%;
+      gap:10px;
+      transform-style:preserve-3d;
+      /* border: 10px solid black; */
+       animation: myan2 4s infinite linear;
+    }
+    @keyframes myan2 {
+  0% {
+     width: 250px;
+  height: 250px;
+  border: 10px solid yellowgreen;
+  }
+  100% {
+     width: 500px;
+  height: 500px;
+  border: 10px solid rgb(24, 196, 170);
+}
+}  
+  .hours{
+      
+      border-radius: 40px;
+        display: flex;
+       justify-content: center;
+      align-items: center;
+      color:rgb(163, 31, 13);
+      font-size: 60px;
+      
+    }
+    .minutes{
+      position: relative;
+      
+      border-radius: 40px;
+       display: flex;
+       color:rgb(201, 174, 21);
+       justify-content: center;
+      align-items: center;
+      font-size: 60px;
+
+      
+    }
+  .seconds{
+      
+      border-radius: 40px;
+        display: flex;
+       justify-content: center;
+      align-items: center;
+      color:rgb(13, 83, 163);
+      font-size: 60px;
+      
+    }
+    .col,.col2{
+      font-size: 60px;
+      color: blueviolet;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="watch">
+    <div class="hours"></div>
+    <div class="col">:</div>
+    <div class="minutes"></div>
+    <div class="col2">:</div>
+    <div class="seconds"></div>
+  </div>
+  <script>
+     function startTimer(duration) {
+      let timer = duration,hours, minutes, seconds;
+      const hoursElement = document.querySelector('.hours');
+      const minutesElement = document.querySelector('.minutes');
+      const secondsElement = document.querySelector('.seconds');
+
+      setInterval(() => {
+        hours = parseInt(timer / 3600,10);
+        minutes = parseInt((timer % 3600)/ 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        hoursElement.textContent = hours < 10 ? "0" + hours : hours;
+        minutesElement.textContent = minutes < 10 ? "0" + minutes : minutes;
+        secondsElement.textContent = seconds < 10 ? "0" + seconds : seconds;
+
+        if (--timer < 0) {
+          timer = duration; 
+        }
+      }, 1000);
+    }
+
+    window.onload = () => {
+      // let a = prompt("give time");
+      const time = 60 * 120 ; 
+      startTimer(time);
+    };
+  </script>
+</body>
+</html>

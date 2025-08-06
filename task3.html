@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Application Form</h1>
+        <form>
+            <label>First Name: </label>
+            <input type="text" required>
+            <label>Last Name: </label>
+            <input type="text" required><br><br>
+            <label>Date of Birth: </label>
+            <input type="date" required>
+            <label>Age: </label>
+            <input type="number" min="0" max="100"><br><br>
+            <label>Gender: </label>
+            <select>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+            <label>Email Address: </label>
+            <input type="text" placeholder="Enter email address"><br><br>
+            <label>Positions Available: </label>
+            <input type="radio" name="position"> Junior Developer
+            <input type="radio" name="position"> Mid-level Developer
+            <input type="radio" name="position"> Senior Developer <br><br>
+            <label>Programming Languages: </label>
+            <input type="checkbox" name="programming languages"> Java
+            <input type="checkbox" name="programming languages"> JavaScript
+            <input type="checkbox" name="programming languages"> Python <br><br>
+            <label>Password: </label>
+            <input type="password" required>
+            <label>Confirm Password: </label>
+            <input type="password" required> <br><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+        <h1>MY DETAILS</h1>
+        <form>
+            <label>Name: </label>
+            <input type="text"><br><br>
+            <label>Father Name: </label>
+            <input type="text"><br><br>
+            <label>Mother Name: </label>
+            <input type="text"><br><br>
+            <label>DOB: </label>
+            <input type="date"><br><br>
+            <label>Gender: </label>
+            <select>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select><br><br>
+            <label>Address: </label>
+            <textarea name="address"></textarea><br><br>
+            <label>Academic Details: </label><br>
+            <table border="1">
+                <tr>
+                    <th> </th>
+                    <th>Passout Year</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>
+                    <td>SSC</td>
+                    <td>
+                        <input type="number" minlength="4" maxlength="4">
+                    </td>
+                    <td>
+                        <input type="number" min="60" max="100">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>
+                        <input type="number" minlength="4" maxlength="4">
+                    </td>
+                    <td>
+                        <input type="number" min="60" max="100">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Engineering</td>
+                    <td>
+                        <input type="number" minlength="4" maxlength="4">
+                    </td>
+                    <td>
+                        <input type="number" min="60" max="100">
+                    </td>
+                </tr>
+            </table>
+            <label>Skills: </label>
+            <input type="checkbox"> C 
+            <input type="checkbox"> C++
+            <input type="checkbox"> Java 
+            <input type="checkbox"> Python 
+            <label>Hobbies: </label>
+            <ol>
+                <li><input type="text"></li>
+                <li><input type="text"></li>
+                <li><input type="text"></li>
+                <li><input type="text"></li>
+            </ol>
+            <label>Declaration: </label>
+            I here by declare that all the above details are true as per my knowledge. <br>
+            <label>Upload Image:</label>
+            <input type="file">
+        </form><br><br>
+        <form>
+            <table>
+                <tr>
+                    <td><label>Username: </label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>Password: </label></td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td><label>City of Employment: </label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>Web server: </label></td>
+                    <td><select>
+                        <option>-Choose a server-</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label>Please specify your role: </label></td>
+                    <td><input type="radio" name="role"> Admin <br>
+                    <input type="radio" name="role"> Engineer <br>
+                    <input type="radio" name="role"> Manager <br>
+                    <input type="radio" name="role"> Guest </td>
+                </tr>
+                <tr>
+                    <td><label>Single Sign-on to the following: </label></td>
+                    <td><input type="checkbox" name="Sign-on"> Mail <br>
+                    <input type="checkbox" name="Sign-on"> Payroll <br>
+                    <input type="checkbox" name="Sign-on"> Self-service </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Login">
+                    <input type="reset"></td>
+                </tr>
+            </table>
+        </form> <br><br>
+        <h1>Travel Reservation Form</h1>
+        <h2>* denotes Mandatory</h2>
+        <label>Full name*: </label> <br>
+        <input type="text" placeholder="FirstName LastName" required><br><br>
+        <label>Email Address*: </label><br>
+        <input type="text" placeholder="EMAIL_ADDRESS" required><br><br>
+        <label>Select Tour Package*: </label><br>
+        <select required>
+            <option>Goa</option>
+        </select><br><br>
+        <label>Arrival date*: </label><br>
+        <input type="text" placeholder="m/d/y" required><br><br>
+        <label>Number of persons*: </label>
+        <input placeholder="UNKNOWN_TYPE" required><br><br>
+        <label>What would you want to avail?*</label><br>
+        Boarding <input type="checkbox"><br>
+        Fooding <input type="checkbox"><br>
+        Sight seeing <input type="checkbox"><br><br>
+        <label>Discount Coupon Code: </label><br>
+        <input type="text" placeholder="UNKNOWN_TYPE"><br><br>
+        <label>Terms and conditions*: </label><br>
+        <input type="radio" name="terms" required> I agree 
+        <input type="radio" name="terms" required> I disagree<br><br>
+        <input type="submit" value="Complete Reservation">
+    </body>
+</html>
