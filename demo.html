@@ -7,37 +7,48 @@
 </head>
 <body>
   <script>
+    value=0;
     function fun1(){
      return new Promise(function(resolved){
       setTimeout(function(){
-        resolved();
+        resolved(value+1);
       },1000)
      })
     }
      function fun2(value){
      return new Promise(function(resolved){
       setTimeout(function(){
-        resolved();
+        resolved(value+1);
       },1000)
      })
     }
      function fun3(value){
      return new Promise(function(resolved){
       setTimeout(function(){
-        resolved();
+        resolved(value+1);
       },1000)
      })
     }
-    fun1().then(function (){
-      console.log("completed-1");
-        fun2().then(function (){
-      console.log("completed-2");
-           fun3().then(function(){
-            console.log("completed-3")
-           })
-    })
-    })
-  
+    // fun1().then(function (){
+    //   console.log("completed-1");
+    //     fun2().then(function (){
+    //   console.log("completed-2");
+    //        fun3().then(function(){
+    //         console.log("completed-3")
+    //        })
+    // })
+    // })
+  async function execute() {
+    try{
+      const r1 = await fun1()
+     const r2 = await fun2(r1)
+      const r3 = await fun3(r2)
+      console.log(r3);}
+      catch(e){
+        console.log(e);
+      }
+  }
+  execute();
   </script>
 </body>
 </html>

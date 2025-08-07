@@ -1,0 +1,252 @@
+<!-- GLOWING ANIMATION -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLOW</title>
+  <style>
+   body {
+     background-color: #000;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+   }
+   .glow {
+     width: 100px;
+     height: 100px;
+     background-color: #0f0;
+     border-radius: 50%;
+     box-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+     animation: glowing 1.5s infinite alternate;
+   }
+   @keyframes glowing {
+     from {
+       box-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+     }
+     to {
+       box-shadow: 0 0 40px #00ff00, 0 0 80px #00ff00, 0 0 120px #00ff00;
+     }
+   }
+    .glow:hover {
+      animation: glowing 0.75s infinite alternate;
+      box-shadow: 0 0 40px #00ff00, 0 0 80px #00ff00, 0 0 120px #00ff00;
+    }
+    .glow:active {
+        box-shadow: 0 0 60px #00ff00, 0 0 120px #00ff00, 0 0 180px #00ff00;
+      }
+    .glow:focus {
+        box-shadow: 0 0 80px #00ff00, 0 0 160px #00ff00, 0 0 240px #00ff00;
+      }
+    .glow:focus-visible {
+        box-shadow: 0 0 100px #00ff00, 0 0 200px #00ff00, 0 0 300px #00ff00;
+      }
+    .glow:focus-within {
+        box-shadow: 0 0 120px #00ff00, 0 0 240px #00ff00, 0 0 360px #00ff00;
+      }
+    .glow:active:hover {
+        box-shadow: 0 0 80px #00ff00, 0 0 160px #00ff00, 0 0 240px #00ff00;
+      }
+    .glow:active:focus {
+        box-shadow: 0 0 100px #00ff00, 0 0 200px #00ff00, 0 0 300px #00ff00;
+      }
+    .glow:active:focus-visible {
+        box-shadow: 0 0 120px #00ff00, 0 0 240px #00ff00, 0 0 360px #00ff00;
+      }
+    .glow:active:focus-within {
+        box-shadow: 0 0 140px #00ff00, 0 0 280px #00ff00, 0 0 420px #00ff00;
+      }
+    .glow:focus:hover {
+        box-shadow: 0 0 140px #00ff00, 0 0 280px #00ff00, 0 0 420px #00ff00;
+      }
+    .glow:focus:active {
+        box-shadow: 0 0 160px #00ff00, 0 0 320px #00ff00, 0 0 480px #00ff00;
+      }
+    .glow:focus-visible:hover {
+        box-shadow: 0 0 180px #00ff00, 0 0 360px #00ff00, 0 0 540px #00ff00;
+      }
+    .glow:focus-within:hover {
+        box-shadow: 0 0 200px #00ff00, 0 0 400px #00ff00, 0 0 600px #00ff00;
+      }
+    .glow:focus-within:active {
+        box-shadow: 0 0 220px #00ff00, 0 0 440px #00ff00, 0 0 660px #00ff00;
+      }
+    .glow:focus-within:focus {
+        box-shadow: 0 0 240px #00ff00, 0 0 480px #00ff00, 0 0 720px #00ff00;
+      }
+    .glow:focus-within:focus-visible {
+        box-shadow: 0 0 260px #00ff00, 0 0 520px #00ff00, 0 0 780px #00ff00;
+      }
+    .glow:focus-within:active:hover {
+        box-shadow: 0 0 280px #00ff00, 0 0 560px #00ff00, 0 0 840px #00ff00;
+      }
+    .glow:focus-within:active:focus {
+        box-shadow: 0 0 300px #00ff00, 0 0 600px #00ff00, 0 0 900px #00ff00;
+      }
+    .glow:focus-within:active:focus-visible {
+        box-shadow: 0 0 320px #00ff00, 0 0 640px #00ff00, 0 0 960px #00ff00;
+      }
+    .glow:focus-within:active:focus-within {
+        box-shadow: 0 0 340px #00ff00, 0 0 680px #00ff00, 0 0 1020px #00ff00;
+      }
+    .glow:focus-within:hover:active {
+        box-shadow: 0 0 360px #00ff00, 0 0 720px #00ff00, 0 0 1080px #00ff00;
+      }
+    .glow:focus-within:hover:focus {
+        box-shadow: 0 0 380px #00ff00, 0 0 760px #00ff00, 0 0 1140px #00ff00;
+      }
+  </style>
+ </head>
+ <body>
+   <div class="glow"></div>
+   <!-- // more divs -->
+    
+    <script>
+      // Optional: Add JavaScript for additional interactivity if needed
+      document.querySelector('.glow').addEventListener('click', function() {
+        alert('Glowing effect clicked!');
+      });
+      document.querySelector('.glow').addEventListener('mouseover', function() {
+        console.log('Mouse over the glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('mouseout', function() {
+        console.log('Mouse out of the glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('focus', function() {
+        console.log('Glowing element focused!');
+      });
+      document.querySelector('.glow').addEventListener('blur', function() {
+        console.log('Glowing element lost focus!');
+      });
+      document.querySelector('.glow').addEventListener('keydown', function(event) {
+        console.log('Key pressed:', event.key);
+      });
+      document.querySelector('.glow').addEventListener('keyup', function(event) {
+        console.log('Key released:', event.key);
+      });
+      document.querySelector('.glow').addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+        console.log('Right-click context menu opened on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('dblclick', function() {
+        console.log('Glowing element double-clicked!');
+      });
+      document.querySelector('.glow').addEventListener('touchstart', function() {
+        console.log('Touch started on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('touchend', function() {
+        console.log('Touch ended on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('touchmove', function() {
+        console.log('Touch moved on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('wheel', function(event) {
+        console.log('Mouse wheel scrolled on glowing element:', event.deltaY);
+      });
+      document.querySelector('.glow').addEventListener('dragstart', function() {
+        console.log('Drag started on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('dragend', function() {
+        console.log('Drag ended on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('dragover', function(event) {
+        event.preventDefault();
+        console.log('Dragging over glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('drop', function(event) {
+        event.preventDefault();
+        console.log('Dropped on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('animationstart', function() {
+        console.log('Animation started on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('animationend', function() {
+        console.log('Animation ended on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('animationiteration', function() {
+        console.log('Animation iteration on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('transitionstart', function() {
+        console.log('Transition started on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('transitionend', function() {
+        console.log('Transition ended on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('transitionrun', function() {
+        console.log('Transition running on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('transitioncancel', function() {
+        console.log('Transition cancelled on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('pointerdown', function(event) {
+        console.log('Pointer down on glowing element:', event.pointerType);
+      });
+      document.querySelector('.glow').addEventListener('pointerup', function(event) {
+        console.log('Pointer up on glowing element:', event.pointerType);
+      });
+      document.querySelector('.glow').addEventListener('pointermove', function(event) {
+        console.log('Pointer moved on glowing element:', event.pointerType);
+      });
+      document.querySelector('.glow').addEventListener('pointerover', function(event) {
+        console.log('Pointer over glowing element:', event.pointerType);
+      });
+      document.querySelector('.glow').addEventListener('pointerout', function(event) {
+        console.log('Pointer out of glowing element:', event.pointerType);
+      });
+      document.querySelector('.glow').addEventListener('pointerenter', function(event) {
+        console.log('Pointer entered glowing element:', event.pointerType);
+      });
+      document.querySelector('.glow').addEventListener('pointerleave', function(event) {
+        console.log('Pointer left glowing element:', event.pointerType);
+      });
+      document.querySelector('.glow').addEventListener('selectstart', function() {
+        console.log('Text selection started on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('selectend', function() {
+        console.log('Text selection ended on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('compositionstart', function() {
+        console.log('Composition started on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('compositionend', function() {
+        console.log('Composition ended on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('compositionupdate', function() {
+        console.log('Composition updated on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('input', function() {
+        console.log('Input event on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('change', function() {
+        console.log('Change event on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('Form submitted with glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('reset', function() {
+        console.log('Form reset with glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('focusin', function() {
+        console.log('Focus in on glowing element!');
+      });
+
+      document.querySelector('.glow').addEventListener('focusout', function() {
+        console.log('Focus out of glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('beforeinput', function() {
+        console.log('Before input event on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('afterprint', function() {
+        console.log('After print event on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('beforeprint', function() {
+        console.log('Before print event on glowing element!');
+      });
+      document.querySelector('.glow').addEventListener('visibilitychange', function() {
+        console.log('Visibility changed for glowing element!');
+      });
+      </script>
+ </body>
+ </html>
