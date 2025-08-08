@@ -86,7 +86,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
         }
+
     </style>
 </head>
 <body>
@@ -113,5 +115,75 @@
             <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>
     </div>
+    <div class="content">
+        <h1>Welcome to Flipkart</h1>
+        <p>Explore a wide range of products at unbeatable prices!</p>
+    </div>
+    <footer>
+        <p>&copy; 2023 Flipkart. All rights reserved.</p>
+    </footer>
+    <style>
+        .content {
+            text-align: center;
+            margin-top: 50px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+            color: #555;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar div {
+            padding: 10px;
+        }
+        .searchbar input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .logininfo, .cart, .sell, .menudots {
+            cursor: pointer;
+        }
+        .logininfo:hover, .cart:hover, .sell:hover, .menudots:hover {
+            color: #007bff;
+        }
+
+        .logo img {
+            transition: transform 0.3s;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .searchbar input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .navbar div {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar div:hover {
+            background-color: #f1f1f1;
+            color: #007bff;
+        }
+
+
+    </style>
+    <script>
+        // Add your JavaScript here
+    </script>
 </body>
 </html>
