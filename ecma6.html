@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECMAScript 6</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    script {
+      display: block;
+      margin-top: 20px;
+      background-color: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    code {
+      background-color: #e8e8e8;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    pre {
+      background-color: #f8f8f8;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .highlight {
+      background-color: #dff0d8;
+      padding: 5px;
+      border-left: 5px solid #3c763d;
+    }
+  </style>
+</head>
+<body>
+<h1>Promises in ECMAScript 6</h1>
+<p>In ECMAScript 6, promises are a powerful way to handle asynchronous operations.
+Promises allow you to write cleaner and more manageable code when dealing with operations that take time, such as network requests or timers.</p>
+<p>Here is an example of how to use promises in ECMAScript 6:</p>
+<pre><code>let value = 0;
+function fun1() {
+  return new Promise(function (resolved) {
+    setTimeout(function () {
+      resolved(value + 1);
+    }, 1000);
+  });
+}
+
+<script>
+  let value = 0;
+
+    function fun1() {
+      return new Promise(function (resolved) {
+        setTimeout(function () {
+          resolved(value + 1);
+        }, 1000);
+      });
+    }
+
+    function fun2(value) {
+      return new Promise(function (resolved) {
+        setTimeout(function () {
+          resolved(value + 1);
+        }, 1000);
+      });
+    }
+
+    function fun3(value) {
+      return new Promise(function (resolved) {
+        setTimeout(function () {
+          resolved(value + 1);
+        }, 1000);
+      });
+    }
+
+    async function execute() {
+      try {
+        const r1 = await fun1();
+        const r2 = await fun2(r1);
+        const r3 = await fun3(r2);
+        console.log(r3);
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
+    execute();
+
+  </script>
+</body>
+</html>
