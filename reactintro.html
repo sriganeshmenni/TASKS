@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Native introduction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    #root {
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">hi</div>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script>
+    const App = () => {
+      return (
+        <div>
+          <h1>Welcome to React Native</h1>
+          <p>This is a simple introduction.</p>
+        </div>
+      );
+    };
+      ReactDOM.render(<App />, document.getElementById("root"));
+    
+  </script>
+</body>
+</html>
